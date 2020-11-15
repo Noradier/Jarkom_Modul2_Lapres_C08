@@ -35,7 +35,9 @@ Testing:
 Lakukan ping dari UML Gresik (Client) yang **nameserver** nya telah terarah menuju ke **IP Malang**
 
 ![Gambar 1.1](1.1.PNG)
+
 ![Gambar 1.2](1.2.PNG)
+
 ![Gambar 1.3](1.3.PNG)
 
 ## Soal 2
@@ -57,6 +59,7 @@ Testing:
 Lakukan ping dari UML Gresik (Client) yang **nameserver** nya telah terarah menuju ke **IP Malang**
 
 ![Gambar 2.1](2.1.PNG)
+
 ![Gambar 2.2](2.2.PNG)
 
 ## Soal 3
@@ -80,6 +83,7 @@ Testing:
 Lakukan ping dari UML Gresik (Client) yang **nameserver** nya telah terarah menuju ke **IP Malang**
 
 ![Gambar 3.1](3.1.PNG)
+
 ![Gambar 3.2](3.2.PNG)
 
 ## Soal 4
@@ -113,7 +117,9 @@ Testing:
 Gunakan command: **host -t PTR "IP Probolinggo** dari UML Gresik (Client) yang **nameserver** nya telah terarah menuju ke **IP Malang**
 
 ![Gambar 4.1](4.1.PNG)
+
 ![Gambar 4.2](4.2.PNG)
+
 ![Gambar 4.3](4.3.PNG)
 
 ## Soal 5
@@ -154,7 +160,9 @@ Testing:
 Lakukan ping dari UML Gresik (Client) yang **nameserver** nya telah terarah menuju ke **IP Malang** dan **IP Mojokerto**  dan **bind** telah dimatikan pada UML Malang
 
 ![Gambar 5.1](5.1.PNG)
+
 ![Gambar 5.2](5.2.PNG)
+
 ![Gambar 5.3](5.3.PNG)
 
 ## Soal 6
@@ -204,8 +212,11 @@ Testing:
 Lakukan ping dari UML Gresik (Client) yang **nameserver** nya telah terarah menuju ke **IP Malang** dan **IP Mojokerto** 
 
 ![Gambar 6.1](6.1.PNG)
+
 ![Gambar 6.2](6.2.PNG)
+
 ![Gambar 6.3](6.3.PNG)
+
 ![Gambar 6.4](6.4.PNG)
 
 ## Soal 7
@@ -228,6 +239,7 @@ Testing:
 Lakukan ping dari UML Gresik (Client) yang **nameserver** nya telah terarah menuju ke **IP Malang** dan **IP Mojokerto** 
 
 ![Gambar 7.1](7.1.PNG)
+
 ![Gambar 7.2](7.2.PNG)
 
 ## Soal 8
