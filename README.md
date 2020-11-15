@@ -71,11 +71,11 @@ Buatlah sebuah website utama dengan subdomain http://penanjakan.semeruyyy.pw yan
 - Gunakan command: **nano /etc/bind/jarkom/semeruc08.pw** untuk mengubah konfigurasi website pada UML Malang
 - Tambahkan konfigurasi sehingga menjadi menjadi seperti berikut:
 ```
-@				                  IN	NS	  semeruc08.pw.
-@				                  IN	A	    10.151.77.76
-www				                IN	CNAME	semeruc08.pw.
-semeruc08.pw.			        IN	NS	  penanjakan.semeruc08.pw.
-penanjakan.semeruc08.pw.	IN	A	    10.151.77.76
+@				IN	NS	semeruc08.pw.
+@				IN	A	10.151.77.76
+www				IN	CNAME	semeruc08.pw.
+semeruc08.pw.			IN	NS	penanjakan.semeruc08.pw.
+penanjakan.semeruc08.pw.	IN	A	10.151.77.76
 ```
 - Restart bind9 dengan command: **service bind9 restart**
 
@@ -108,8 +108,8 @@ zone "77.151.10.in-addr.arpa" {
 - Kemudian, gunakan command: **nano /etc/bind/jarkom/77.151.10.in-addr.arpa** untuk membuat konfigurasi reverse domain
 - Isi konfigurasi sebagai berikut:
 ```
-77.151.10.in-addr.arpa.	IN	NS	semeruc08.pw.
-76			                IN	PTR	semeruc08.pw.
+77.151.10.in-addr.arpa.			IN	NS	semeruc08.pw.
+76					IN	PTR	semeruc08.pw.
 ```
 - Restart bind9 dengan command: **service bind9 restart**
 
@@ -174,13 +174,13 @@ Buatlah sebuah website utama dengan subdomain dengan alamat http://gunung.semeru
 - Gunakan command: **nano /etc/bind/jarkom/semeruc08.pw** untuk mengubah konfigurasi website pada UML Malang
 - Tambahkan konfigurasi sehingga menjadi menjadi seperti berikut:
 ```
-@				                      IN	NS	semeruc08.pw.
-@				                      IN	A	10.151.77.76
-www				                    IN	CNAME	semeruc08.pw.
-ns1				                    IN	A	10.151.77.75
-gunung				                IN	NS	ns1
-semeruc08.pw.			            IN	NS	penanjakan.semeruc08.pw.
-penanjakan.semeruc08.pw.	    IN	A	10.151.77.76
+@				IN	NS	semeruc08.pw.
+@				IN	A	10.151.77.76
+www				IN	CNAME	semeruc08.pw.
+ns1				IN	A	10.151.77.75
+gunung				IN	NS	ns1
+semeruc08.pw.			IN	NS	penanjakan.semeruc08.pw.
+penanjakan.semeruc08.pw.	IN	A	10.151.77.76
 www.penanjakan.semeruc08.pw.	IN	CNAME	penanjakan.semeruc08.pw.
 ```
 - Restart bind9 pada UML Malang dengan menggunakan command: **service bind9 restart**
@@ -204,7 +204,7 @@ zone "gunung.semeruc08.pw" {
 - Isikan konfigurasi sebagai berikut:
 ```
 @				IN	NS	gunung.semeruc08.pw.
-@				IN	A	  10.151.77.76
+@				IN	A	10.151.77.76
 ```
 - Restart bind9 pada UML Mojokerto dengan menggunakan command: **service bind9 restart**
 
@@ -228,9 +228,9 @@ Buatlah sebuah website utama dengan subdomain dengan nama http://naik.gunung.sem
 - Gunakan command: **nano /etc/bind/delegasi/gunung.semeruc08.pw** untuk mengubah konfigurasi website
 - Tambahkan konfigurasi sehingga menjadi seperti berikut:
 ```
-@				                  IN	NS	gunung.semeruc08.pw.
-@				                  IN	A	10.151.77.76
-gunung.semeruc08.pw.		  IN	NS	naik.gunung.semeruc08.pw.
+@				IN	NS	gunung.semeruc08.pw.
+@				IN	A	10.151.77.76
+gunung.semeruc08.pw.		IN	NS	naik.gunung.semeruc08.pw.
 naik.gunung.semeruc08.pw.	IN	A	10.151.77.76
 ```
 - Restart bind9 pada UML Mojokerto dengan menggunakan command: **service bind9 restart**
