@@ -347,6 +347,9 @@ Web http://naik.gunung.semeruyyy.pw sudah bisa diakses hanya dengan menggunakan 
 
 ### Jawaban
 
+- Mengikuti langkah nomor 8: membuat naik.gunung.semeruc08.pw.conf pada /etc/apache2/sites-available/ dengan ServerName, ServerAlias, serta Document Root lalu diaktifkan dan di restart apache.
+- Pada file naik.gunung.semeruc08.pw.conf, ditambahkan 8888 pada Virtual Host.
+- Membuat direktori naik.gunung.semeruc08.pw di /var/www/
 - Buat sebuah file .conf di /etc/apache2/ yang memiliki Listen 8888
 
 ![Gambar 14-1](14-1.png)
