@@ -244,32 +244,164 @@ Lakukan ping dari UML Gresik (Client) yang **nameserver** nya telah terarah menu
 
 ## Soal 8
 
+### Soal
+
+Setelah selesai membuat keseluruhan domain, kamu diminta untuk segera mengatur web server.
+Domain http://semeruyyy.pw memiliki DocumentRoot pada /var/www/semeruyyy.pw. Awalnya web dapat diakses menggunakan alamat http://semeruyyy.pw/index.php/home.
+
+### Jawaban
+
+- Membuat semeruc08.pw.conf pada /etc/apache2/sites-available/
+- Tambahkan ServerName dan ServerAlias serta DocumentRoot pada semeruc08.pw
+- Aktifkan konfigurasi dengan **a2ensite** dan **restart apache**.
+- Buat direktori semeruc08.pw di /var/www/
+
+![Gambar 8-1](8-1.png)
+
+![Gambar 8-2](8-2.png)
+
+![Gambar 8-3](8-3.png)
+
 ## Soal 9
+
+### Soal
+
+Diaktifkan mod rewrite agar urlnya menjadi http://semeruyyy.pw/home.
+
+### Jawaban
+
+- Buat file .htaccess yang mengandung **RewriteRule ^home$ /index.php/home** di /var/www/semeruc08.pw/
+
+![Gambar 9-1](9-1.png)
+
+![Gambar 9-2](9-2.png)
 
 ## Soal 10
 
+### Soal
+
+Web http://penanjakan.semeruyyy.pw akan digunakan untuk menyimpan assets file yang memiliki DocumentRoot pada /var/www/penanjakan.semeruyyy.pw dan memiliki struktur folder sebagai berikut:
+```
+/var/www/penanjakan.semeruyyy.pw
+								/public/javascripts
+								/public/css
+								/public/images
+								/errors
+```
+
+### Jawaban
+- Mengikuti langkah nomor 8: membuat penanjakan.semeruc08.pw.conf pada /etc/apache2/sites-available/ dengan ServerName, ServerAlias, serta Document Root lalu diaktifkan dan di restart apache.
+- Membuat direktori penanjakan.semeruc08.pw di /var/www/ dengan dibuat struktur folder sesuai soal.
+
+![Gambar 10-1](10-1.png)
+
+![Gambar 10-2](10-2.png)
+
 ## Soal 11
+
+### Soal
+
+Pada folder /public dibolehkan directory listing namun untuk folder yang berada di dalamnya tidak dibolehkan.
+
+### Jawaban
+
+- Tambahkan konfigurasi **Option +/-Indexes** pada tiap direktori penanjakan.semeruc08.pw di etc/apache2/sites-available/penanjakan.semeruc08.pw.conf
+
+![Gambar 11-1](11-1.png)
+
+![Gambar 11-2](11-2.png)
 
 ## Soal 12
 
+### Soal
+
+Untuk mengatasi HTTP Error code 404, disediakan file 404.html pada folder /errors untuk mengganti error default 404 dari Apache.
+
+### Jawaban
+
+- Tambahkan **ErrorDocument 404** di file .conf dan redirect ke file 404.html tersebut.
+
+![Gambar 12-1](12-1.png)
+
+![Gambar 12-2](12-2.png)
+
 ## Soal 13
+
+### Soal
+
+Untuk mengakses file assets javascript awalnya harus menggunakan url http://penanjakan.semeruyyy.pw/public/javascripts. Karena terlalu panjang maka dibuatkan konfigurasi virtual host agar ketika mengakses file assets menjadi http://penanjakan.semeruyyy.pw/js.
+
+### Jawaban
+
+- Tambahkan **Alias "/js" "varr/www/penanjakan.semeruc08.pw/public/javascripts"** pada **penanjakan.semeruc08.conf**
+
+![Gambar 13-1](13-1.png)
+
+![Gambar 13-2](13-2.png)
 
 ## Soal 14
 
+### Soal
+
+Web http://naik.gunung.semeruyyy.pw sudah bisa diakses hanya dengan menggunakan port 8888. DocumentRoot web berada pada /var/www/naik.gunung.semeruyyy.pw.
+
+### Jawaban
+
+- Buat sebuah file .conf di /etc/apache2/ yang memiliki Listen 8888
+
+![Gambar 14-1](14-1.png)
+
+![Gambar 14-2](14-2.png)
+
 ## Soal 15
+
+### Soal
+
+Bibah meminta kamu membuat web http://naik.gunung.semeruyyy.pw agar diberi autentikasi password dengan username “semeru” dan password “kuynaikgunung” supaya aman dan tidak sembarang orang bisa mengaksesnya.
+
+### Jawaban
+
+- Menggunakan command htpasswd.
+```htpasswd -c <nama file>.htaccess <username>```
+
+- Setelah command dimasukkan, masukkan password.
+- Atur file .conf website yang ingin diberi password.
+
+![Gambar 15-1](15-1.png)
+
+![Gambar 15-2](15-2.png)
 
 ## Soal 16
 
+### Soal
+
+Karena dirasa kurang profesional, maka setiap Bibah mengunjungi IP PROBOLINGGO akan dialihkan secara otomatis ke http://semeruyyy.pw.
+
+### Jawaban
+
+- Buat redirect di **000-default.conf** dengan kode berikut:
+```Redirect / http://semeruc08.pw```
+
+![Gambar 16](16.png)
+
+![Gambar 8-3](8-3.png)
+
 ## Soal 17
 
-Tambahkan kode berikut ke /var/www/penanjakan.semeruc08.pw/.htaccess
+### Soal
+
+Karena pengunjung pada /var/www/penanjakan.semeruyyy.pw/public/images sangat banyak maka semua request gambar yang memiliki substring “semeru” akan diarahkan menuju semeru.jpg.
+
+### Jawaban
+
+- Tambahkan kode berikut ke /var/www/penanjakan.semeruc08.pw/.htaccess
 
 ```
 RewriteEngine On
 RewriteRule ^public/images/?(.*)semeru(.*)\.jpg$ public/images/semeru.jpg [NC,L]
 ```
 
-Hasilnya adalah sebagai berikut:
+- Hasilnya adalah sebagai berikut:
 
 ![Gambar 17-1](17-1.png)
 
