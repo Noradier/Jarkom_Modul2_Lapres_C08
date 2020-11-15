@@ -41,3 +41,16 @@ tersebut Bibah memberi router di SURABAYA.
 ## Soal 16
 
 ## Soal 17
+
+Tambahkan kode berikut ke /var/www/penanjakan.semeruc08.pw/.htaccess
+
+```
+RewriteEngine On
+RewriteRule ^public/images/?(.*)semeru(.*)\.jpg$ public/images/semeru.jpg [NC,L]
+```
+
+Hasilnya adalah sebagai berikut:
+
+![Gambar 17-1](17-1.png)
+
+![Gambar 17-2](17-2.png)
