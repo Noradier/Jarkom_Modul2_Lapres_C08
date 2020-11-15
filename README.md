@@ -27,7 +27,7 @@ zone "semeruc08.pw" {
 - Isikan konfigurasi sebagai berikut:
 ```
 @				IN	NS	semeruc08.pw.
-@				IN	A	  10.151.77.76
+@				IN	A	10.151.77.76
 ```
 - Restart bind9 dengan command: **service bind9 restart**
 
@@ -49,9 +49,9 @@ Buatlah sebuah website utama dengan alias http://www.semeruyyy.pw
 - Gunakan command: **nano /etc/bind/jarkom/semeruc08.pw** untuk mengubah konfigurasi website pada UML Malang
 - Tambahkan konfigurasi sehingga menjadi seperti berikut:
 ```
-@				  IN	NS      semeruc08.pw.
-@				  IN	A       10.151.77.76
-www				IN	CNAME   semeruc08.pw.
+@	IN	NS      semeruc08.pw.
+@	IN	A       10.151.77.76
+www	IN	CNAME   semeruc08.pw.
 ```
 - Restart bind9 dengan command: **service bind9 restart**
 
